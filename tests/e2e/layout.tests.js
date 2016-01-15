@@ -4,8 +4,8 @@ describe('Define your Suite', function() {
         var loginButton = element(by.id("login"));
         loginButton.click();
         
-        //expect greetings to contain expected text
-        var greeting = element(by.id("displayName"));
-        expect(greeting.getText()).toContain("Subhag");
+        //expect the greetings.
+        var greetings = element(by.id("displayName"));
+        expect(greetings.getText()).toContain("Subhag");
     })
 });

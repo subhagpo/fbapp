@@ -7,11 +7,7 @@ describe('Unit Test Suite', function() {
         Questions = _Questions_;
     }));
 
-    it('Unit Test Spec', inject(function(Questions) {
+    it('Unit Test Spec', inject(function() {
         expect(Questions).toBeDefined();
-    }));
-    
-        it('Unit Test Spec', inject(function(Questions) {
-        expect(Questions.all().length).toEqual(3);
     }));
 });

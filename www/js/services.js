@@ -1,30 +1,28 @@
 angular.module('starter.services', [])
-
-.factory('Questions', function()
-{
-    var questions = [
-        {
-            id:0,
-            $value: "Rate workshop",
-            Rating: null
-        },
-        {
-            id:1,
-            $value: "Rate conference",
-            Rating: 8
-        },
-        {
-            id:2,
-            $value: "Rate overall experience",
-            Rating: 6
-        }
-    ];
-    
-    return {
-        all : function() {
-            return questions;
-        }
-    }
-})
  
-
+.factory('Questions', function() {
+  // Some fake testing data
+  var questions = [
+     {
+        Id: 0,
+        $value: 'Rate this workshop?',
+        Rating: null
+     }, 
+     {
+        Id: 1,
+        $value: 'Rate the sessions?',
+        Rating: null
+     },
+     {
+        Id: 2,
+        $value: 'Rate your overall experience?',
+        Rating: 8
+     }
+  ];
+ 
+  return {
+    all: function() {
+      return questions;
+    }
+  };
+});
