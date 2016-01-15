@@ -366,12 +366,15 @@ a.download:hover, a.follow:hover {
 }
 
 .header {
-    background: aliceblue;
+    background: yellowgreen;
     padding-top: 5px;
+    border-radius: 30px;
 }
 
 .detail {
     background: lightsteelblue;
     padding-top: 5px;
     padding-bottom: 15px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
