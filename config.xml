@@ -55,7 +55,7 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
     </platform>
     <platform name="android">
-        <preference name="CodePushDeploymentKey" value="Z6Ta-Hr44aS-md89wvC-ycC8HsZhN1PVveVvx" />
+        <preference name="CodePushDeploymentKey" value="s2ZPFL6cU_-6rBessfbqgX5r_NN_N1PVveVvx" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
