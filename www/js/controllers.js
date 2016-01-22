@@ -151,6 +151,7 @@ angular.module('starter.controllers', [])
     });
 
     $scope.submitSurvey = function() {
+        /*
       hockeyapp.start(function() {
           console.log("success");
       }, function (err) {
@@ -159,8 +160,8 @@ angular.module('starter.controllers', [])
       
       //force app crash
       hockeyapp.forceCrash();
-      
-        /*
+      */
+        
         var send={};
 
         for(var i = 0; i < $scope.questions.length; i++) {
@@ -175,7 +176,7 @@ angular.module('starter.controllers', [])
           $scope.modal.show();
           _self.surveySubmitted = true;
           });
-          */
+          
     }
 
     $scope.previous = function() {
