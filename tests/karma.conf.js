@@ -15,11 +15,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        '../www/lib/ionic/js/ionic.bundle.js',
-        '../www/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+        '../www/jquery.min.js',
+        '../www/lib/angular/angular.js',
         '../www/js/*.js',
-        '../www/lib/angular-mocks/angular-mocks.js', 
-        'unit/**/*.tests.js'
+        '../www/lib/angular-mocks/angular-mocks.js',
+        'unit/**/*.tests.js' 
+
     ],
 
 
@@ -37,12 +38,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'junit'],
-    
-    junitReporter: { 
-        outputDir: '_results'         
-    }, 
-
+    reporters: ['progress'],
 
 
     // web server port

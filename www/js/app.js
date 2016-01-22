@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.bootstrap'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', "firebase", 'ui.bootstrap', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,8 +20,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
-    } 
-        
+    }
+    
     /* Invoke sync with the custom options, which enables user interaction.
        For customizing the sync behavior, see SyncOptions in the CodePush documentation. 
     */
@@ -87,7 +87,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+    controller: 'AppCtrl'
   })
 
   .state('tab.feedback', {
@@ -104,8 +105,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AppCtrl'
+        templateUrl: 'templates/tab-account.html'
       }
     }
   });

@@ -1,28 +1,20 @@
-angular.module('starter.services', [])
- 
-.factory('Questions', function() {
-  // Some fake testing data
-  var questions = [
-     {
-        Id: 0,
-        $value: 'Rate this workshop?',
-        Rating: null
-     }, 
-     {
-        Id: 1,
-        $value: 'Rate the sessions?',
-        Rating: null
-     },
-     {
-        Id: 2,
-        $value: 'Rate your overall experience?',
-        Rating: 8
-     }
-  ];
- 
-  return {
-    all: function() {
-      return questions;
-    }
-  };
+angular.module('starter.services', ['firebase'])
+
+.factory ("Questions", function($firebase, $firebaseArray) {
+    var questionsRef = new Firebase("https://poll2roll.firebaseio.com/questions");
+    var questions = $firebaseArray(questionsRef);  
+    
+    return {
+    all: function() {
+      return questions;
+    },
+    get: function(id) {
+      for (var i = 0; i < questions.length; i++) {
+        if (questions[i].Id === parseInt(id)) {
+          return questions[i];
+        }
+      }
+      return null;
+    }
+  };
 });
